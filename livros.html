@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Biblioteca Mauá</title>
+        <script
+            src="https://code.jquery.com/jquery-3.6.1.js"
+            integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+            crossorigin="anonymous"></script>
+        <link
+            href="https://fonts.googleapis.com/icon?family=Material+Icons"
+            rel="stylesheet">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+            rel="stylesheet"/>
+        <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+
+        <link
+            href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+            rel="stylesheet"
+            id="bootstrap-css">
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+        <link
+            rel='stylesheet'
+            href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css'>
+
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+            crossorigin="anonymous">
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer">
+        <link rel="shortcut icon" href="imagens/logomaua.png" type="image/x-icon">
+        <link rel="stylesheet" href="css/livros.css">
+    </head>
+
+    <body>
+
+        <!-- cabecalho -->
+        <header class="area-cabecalho">
+
+            <div class="navbar-area">
+                <a href="index.html">
+                    <img src="imagens/logomaua.png" alt="Logo Mauá" class="logo-img">
+                </a>
+                <div class="container-cabecalho">
+                    <nav class="site-navbar">
+                        <a href="index.html" class="site-logo">Biblioteca Mauá</a>
+                        <div class="search-box">
+                            <input type="text" class="search-txt" placeholder="Buscar livro">
+                            <a href="#" class="search-btn">
+                                <img src="imagens/lupa.png" alt="Lupa de busca" height="20" width="20">
+                            </a>
+                        </div>
+                        <div id="menu" class="fas fa-bars"></div>
+                        <div id="navbar">
+                            <ul>
+                                <li>
+                                    <a href="guia.html">Guia de uso</a>
+                                </li>
+                                <li>
+                                    <a href="livros.html#fcf-form">Contate-nos</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <button class="nav-toggler">
+                            <span></span>
+                        </button>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <!-- titulo e subtitulo -->
+        <div class="container">
+            <h1 class="text-center section-Titulo">Livros</h1>
+            <h4 class="text-center section-subTitulo">Bem-vindo à página de livros da
+                biblioteca da faculdade! Aqui você encontrará um universo de conhecimento ao
+                alcance das suas mãos. Nossa seleção abrange todos os cursos oferecidos, permitindo que você mergulhe em diferentes
+                áreas de estudo. Aproveite o poder da leitura para expandir seus horizontes e aprofundar seu aprendizado!</h4>
+        </div>
+
+        <!-- livros -->
+        <div id="container-l">
+            <nav class="toda-coluna">
+                <div class="coluna-sigla">
+                    <li>
+                        <a href="livros.html#adm">ADM.</a>
+                    </li>
+                    <li>
+                        <a href="livros.html#cic">CIC.</a>
+                    </li>
+                    <li>
+                        <a href="livros.html#des">DESIGN.</a>
+                    </li>
+                    <li>
+                        <a href="livros.html#engciv">ENG. CIVIL.</a>
+                    </li>
+                    <li>
+                        <a href="livros.html#engalim">ENG. ALIM.</a>
+                    </li>
+                    <li>
+                        <a href="livros.html#engcomp">ENG. COMP.</a>
+                    </li>
+                    <li>
+                        <a href="livros.html#engcont">ENG. CA.</a>
+                    </li>
+                    <li>
+                        <a href="livros.html#engprod">ENG. PROD.</a>
+                    </li>
+                    <li>
+                        <a href="livros.html#engelet">ENG. ELÉT.</a>
+                    </li>
+                    <li>
+                        <a href="livros.html#engeletron">ENG.ELETRÔ.</a>
+                    </li>
+                    <li>
+                        <a href="livros.html#engmec">ENG.MECÂN.</a>
+                    </li>
+                    <li>
+                        <a href="livros.html#engquim">ENG. QUIM.</a>
+                    </li>
+                </div>
+            </nav>
+            <main>
+                <header id="adm">Administração:</header>
+                <section class="generos mt-3" id="generos">
+                    <div class="genero pt-4 col-sm-3">
+                        <img src="imagens/administracao1.jpg">
+                        <p>Administração Teoria, Processo e Prática.</p>
+                        <button class="btn-livro">
+                            <a href="adm1.html">Saiba mais</a>
+                        </button>
+                    </div>
+                    <div class=" genero pt-4 col-sm-3">
+                        <img src="imagens/administracao2.jpg">
+                        <p>O Monge e o Executivo: Uma História Sobre a Essência da Liderança.</p>
+                        <button class="btn-livro">
+                            <a href="adm2.html">Saiba mais</a>
+                        </button>
+                    </div>
+                </section>
+                <header id="cic">Ciência da Computação:</header>
+                <section class="generos mt-3" id="generos">
+                    <div class="genero pt-4 col-sm-3">
+                        <img src="imagens/cienciadacomp1.jpg">
+                        <p>Conceitos de Linguagens de Programação.</p>
+                        <button class="btn-livro">
+                            <a href="cic1.html">Saiba mais</a>
+                        </button>
+                    </div>
+                    <div class=" genero pt-4 col-sm-3">
+                        <img src="imagens/cienciadacomp2.jpg">
+                        <p>Sistema de Banco de Dados.</p>
+                        <button class="btn-livro">
+                            <a href="cic2.html">Saiba mais</a>
+                        </button>
+                    </div>
+                </section>
+                <header id="des">Design:</header>
+                <section class="generos mt-3" id="generos">
+                    <div class="genero pt-4 col-sm-3">
+                        <img src="imagens/design1.jpg">
+                        <p>Design Thinking: Uma Metodologia Poderosa Para Decretar o Fim das Velhas Ideias.</p>
+                        <button class="btn-livro">
+                            <a href="des1.html">Saiba mais</a>
+                        </button>
+                    </div>
+                    <div class="genero pt-4 col-sm-3">
+                        <img src="imagens/design2.png">
+                        <p>The Elements of Typographic Style.</p>
+                        <button class="btn-livro">
+                            <a href="des2.html">Saiba mais</a>
+                        </button>
+                    </div>
+                </section>
+                <header id="engciv">Engenharia Civil:</header>
+                <section class="generos mt-3" id="generos">
+                    <div class="genero pt-4 col-sm-3">
+                        <img src="imagens/engenhariacivil1.jpg">
+                        <p>Análise Estrutural.</p>
+                        <button class="btn-livro">
+                            <a href="engciv1.html">Saiba mais</a>
+                        </button>
+                    </div>
+                    <div class="genero pt-4 col-sm-3">
+                        <img src="imagens/engenhariacivil2.jpg">
+                        <p>Fundações: Teoria e Prática.</p>
+                        <button class="btn-livro">
+                            <a href="engciv2.html">Saiba mais</a>
+                        </button>
+                    </div>
+                </section>
+                <header id="engalim">Engenharia de Alimentos:</header>
+                <section class="generos mt-3" id="generos">
+                    <div class="genero pt-4 col-sm-3">
+                        <img src="imagens/engenhariaalim1.jpg">
+                        <p>Food Engineering Handbook.</p>
+                        <button class="btn-livro">
+                            <a href="engalim1.html">Saiba mais</a>
+                        </button>
+                    </div>
+                    <div class="genero pt-4 col-sm-3">
+                        <img src="imagens/engenhariaalim2.jpg">
+                        <p>Food Process Engineering and Technology.</p>
+                        <button class="btn-livro">
+                            <a href="engalim2.html">Saiba mais</a>
+                        </button>
+                    </div>
+                </section>
+                <header id="engcomp">Engenharia de Computação</header>
+                <section class="generos mt-3" id="generos">
+                    <div class="genero pt-4 col-sm-3">
+                        <img src="imagens/engenhariacomp1.jpg">
+                        <p>Computer Organization and Design: The Hardware/Software Interface.</p>
+                        <button class="btn-livro">
+                            <a href="engcomp1.html">Saiba mais</a>
+                        </button>
+                    </div>
+                    <div class="genero pt-4 col-sm-3">
+                        <img src="imagens/engenhariacomp2.jpg">
+                        <p>Introduction to Algorithms.</p>
+                        <button class="btn-livro">
+                            <a href="engcomp2.html">Saiba mais</a>
+                        </button>
+                    </div>
+                </section>
+                <header id="engcont">Engenharia de Controle e Automoção:</header>
+                <section class="generos mt-3" id="generos">
+                    <div class="genero pt-4 col-sm-3">
+                        <img src="imagens/engenhariaconteaut1.jpg">
+                        <p>Princípios e Prática do Controle Automático de Processo.</p>
+                        <button class="btn-livro">
+                            <a href="engcea1.html">Saiba mais</a>
+                        </button>
+                    </div>
+                    <div class="genero pt-4 col-sm-3">
+                        <img src="imagens/engenhariaconteaut2.jpg">
+                        <p>Sistemas de Controle Moderno.</p>
+                        <button class="btn-livro">
+                            <a href="engcea2.html">Saiba mais</a>
+                        </button>
+                    </div>
+                </section>
+                <header id="engprod">Engenharia de Produção:</header>
+                <section class="generos mt-3" id="generos">
+                    <div class="genero pt-4 col-sm-3">
+                        <img src="imagens/engenhariaproducao1.jpg">
+                        <p>Administração da Produção e Operações.</p>
+                        <button class="btn-livro">
+                            <a href="engprod1.html">Saiba mais</a>
+                        </button>
+                    </div>
+                    <div class="genero pt-4 col-sm-3">
+                        <img src="imagens/engenhariaproducao2.jpg">
+                        <p>Engenharia Econômica.</p>
+                        <button class="btn-livro">
+                            <a href="engprod2.html">Saiba mais</a>
+                        </button>
+                    </div>
+                </section>
+                <header id="engelet">Engenharia Elétrica:</header>
+                <section class="generos mt-3" id="generos">
+                    <div class="genero pt-4 col-sm-3">
+                        <img src="imagens/engenhariaeletrica1.jpg">
+                        <p>Sistemas de Controle Automático.</p>
+                        <button class="btn-livro">
+                            <a href="engele1.html">Saiba mais</a>
+                        </button>
+                    </div>
+                    <div class="genero pt-4 col-sm-3">
+                        <img src="imagens/engenhariaeletrica2.jpg">
+                        <p>Elementos de Análise de Sistemas de Potência.</p>
+                        <button class="btn-livro">
+                            <a href="engele2.html">Saiba mais</a>
+                        </button>
+                    </div>
+                </section>
+                <header id="engeletron">Engenharia Eletrônica:</header>
+                <section class="generos mt-3" id="generos">
+                    <div class="genero pt-4 col-sm-3">
+                        <img src="imagens/engenhariaeletronica1.jpg">
+                        <p>Sinais e Sistemas Lineares.</p>
+                        <button class="btn-livro">
+                            <a href="engeletron1.html">Saiba mais</a>
+                        </button>
+                    </div>
+                    <div class="genero pt-4 col-sm-3">
+                        <img src="imagens/engenhariaeletronica2.jpg">
+                        <p>Eletrônica de Potência: Circuitos, Dispositivos e Aplicações.</p>
+                        <button class="btn-livro">
+                            <a href="engeletron2.html">Saiba mais</a>
+                        </button>
+                    </div>
+                </section>
+                <header id="engmec">Engenharia Mecânica:</header>
+                <section class="generos mt-3" id="generos">
+                    <div class="genero pt-4 col-sm-3">
+                        <img src="imagens/engenhariamecanica1.jpg">
+                        <p>Mecânica dos Materiais.</p>
+                        <button class="btn-livro">
+                            <a href="engmec1.html">Saiba mais</a>
+                        </button>
+                    </div>
+                    <div class="genero pt-4 col-sm-3">
+                        <img src="imagens/engenhariamecanica2.jpg">
+                        <p>Mecânica dos Fluidos: Fundamentos e Aplicações.</p>
+                        <button class="btn-livro">
+                            <a href="engmec2.html">Saiba mais</a>
+                        </button>
+                    </div>
+                </section>
+                <header id="engquim">Engenharia Química:</header>
+                <section class="generos mt-3" id="generos">
+                    <div class="genero pt-4 col-sm-3">
+                        <img src="imagens/engenhariaquimica1.jpg">
+                        <p>Princípios de Transferência de Calor.</p>
+                        <button class="btn-livro">
+                            <a href="engquim1.html">Saiba mais</a>
+                        </button>
+                    </div>
+                    <div class="genero pt-4 col-sm-3">
+                        <img src="imagens/engenhariaquimica2.jpg">
+                        <p>Fenômenos de Transporte.</p>
+                        <button class="btn-livro">
+                            <a href="engquim2.html">Saiba mais</a>
+                        </button>
+                    </div>
+                </section>
+            </main>
+        </div>
+
+        <!-- contate-nos -->
+        <div class="fcf-body">
+
+            <div id="fcf-form">
+                <h3 class="fcf-h3">Contate-nos:</h3>
+                <div id="fcf-form-f">
+                    <div class="esq">
+                        <p>
+                            <br>
+                            Biblioteca Central:
+                            <br>
+                            Campus de São Caetano do Sul
+                            <br>
+                            Telefone: (11) 4239-3407 ou 4239-3413
+                            <br>
+                            Fax: (11) 4239-3141
+                            <br>
+                            Sugestões: biblioteca@maua.br
+                        </p>
+                    </div>
+                    <div id="fcf-form-f">
+                        <p>
+                            <br>Biblioteca Setorial:
+                            <br>Campus de São Paulo
+                            <br>Telefone: (11) 5088-0816
+                            <br>Fax: (11) 5088-0820
+                            <br>Sugestões: biblioteca.eam@maua.br
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- rodapé -->
+        <footer class="rodape">
+            <div class="container">
+                <div class="row p-3">
+                    <div class="algo col-md-3">
+                        <span class="logo">
+                            <h2>Instituto Mauá de Tecnologia</h2>
+                        </span>
+                    </div>
+                    <div class="textos-esquerda col-md-3">
+                        <ul>
+                            <li class="sc">
+                                <a href="https://www.maua.br ">Site do instituto</a>
+                            </li>
+                            <li class="sc">
+                                <a href="#">Telefone: (11) 4423-9843</a>
+                            </li>
+                            <li class="sc">
+                                <a href="#">Endereço: Praça Mauá, 1 - Mauá, São Caetano do Sul - SP, 09580-900</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="textos-direita col-md-6">
+                        <div class="wrapper">
+                            <a href="https://www.facebook.com/InstitutoMaua" class="icon facebook">
+                                <div class="tooltip">Facebook</div>
+                                <span>
+                                    <i class="fab fa-facebook-f"></i>
+                                </span>
+                            </a>
+                            <a href="https://twitter.com/InfoMaua" class="icon twitter">
+                                <div class="tooltip">Twitter</div>
+                                <span>
+                                    <i class="fab fa-twitter"></i>
+                                </span>
+                            </a>
+                            <a href="https://www.instagram.com/infomaua/" class="icon instagram">
+                                <div class="tooltip">Instagram</div>
+                                <span>
+                                    <i class="fab fa-instagram"></i>
+                                </span>
+                            </a>
+                            <a href="#" class="icon phone">
+                                <div class="tooltip">Telefone</div>
+                                <span>
+                                    <i class="fa fa-phone"></i>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <p class="copy">&copy; Todos os direitos reservados.</p>
+
+        <!-- scripts -->
+        <script
+            type="module"
+            src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script
+            nomodule="nomodule"
+            src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+        <script src="js/script.js"></script>
+    </body>
+
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Biblioteca Mauá</title>
+        <link rel="stylesheet" href="css/Login.css">
+        <link rel="shortcut icon" href="imagens/logomaua.png" type="image/x-icon">
+        <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+            integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+            crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="container">
+            <div class="content first-content">
+                <div class="first-column">
+                    <h2 class="title title-primary">Biblioteca Instituto Mauá de Tecnologia</h2>
+                    <button class="btn btn-terc">
+                        <a href="cadastro.html">Cadastro</a>
+                    </button>
+                </div>
+                <div class="second-column">
+                    <h2 class="title title-second">Login</h2>
+                    <form class="form">
+                        <label class="label-input" for="">
+                            <i class="far fa-envelope icon-modify"></i>
+                            <input type="email" id="email" placeholder="Email">
+                        </label>
+                        <label class="label-input" for="">
+                            <i class="fas fa-lock icon-modify"></i>
+                            <input type="password" id="password" placeholder="Senha">
+                        </label>
+                        <button class="btn btn-second" id="entrar">Entrar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </body>
+    <script type="module">
+        import {initializeApp} from "https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js";
+        import {getDatabase, ref, get, child} from "https://www.gstatic.com/firebasejs/9.22.2/firebase-database.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyAJ4R0O0JtY_Y0VaSoFtp9qbuIa3pFvB-c",
+            authDomain: "projetomaua-4b94c.firebaseapp.com",
+            projectId: "projetomaua-4b94c",
+            storageBucket: "projetomaua-4b94c.appspot.com",
+            messagingSenderId: "369150420385",
+            appId: "1:369150420385:web:eae9eb65c2fc3d25f217e0",
+            measurementId: "G-3C0VBLMNNV"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const db = getDatabase(app);
+
+        document
+            .getElementById("entrar")
+            .addEventListener('click', async function (e) {
+                e.preventDefault();
+
+                // Obter os valores dos campos de entrada
+                const emailInput = document
+                    .getElementById("email")
+                    .value;
+                const passwordInput = document
+                    .getElementById("password")
+                    .value;
+
+                // Verificar se os campos estão preenchidos
+                if (!emailInput || !passwordInput) {
+                    alert("Por favor, preencha todos os campos.");
+                    return;
+                }
+
+                try {
+                    // Verificar se as informações de login são válidas
+                    const snapshot = await get(ref(db, "user"));
+                    const users = snapshot.val();
+
+                    let validLogin = false;
+                    let username = "";
+
+                    for (const key in users) {
+                        if (users[key].email === emailInput && users[key].password === passwordInput) {
+                            validLogin = true;
+                            username = users[key].username;
+                            break;
+                        }
+                    }
+
+                    if (validLogin) {
+                        alert(`Login realizado com sucesso! Bem-vindo, ${username}!`);
+                        window.location.href = "index.html";
+                    } else {
+                        alert("Credenciais inválidas. Por favor, verifique seu email e senha.");
+                    }
+                } catch (error) {
+                    console.error("Erro ao realizar o login:", error);
+                    alert("Erro ao realizar o login. Por favor, tente novamente mais tarde.");
+                }
+            });
+    </script>
+</html>
